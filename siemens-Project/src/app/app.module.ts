@@ -8,6 +8,8 @@ import { NavComponent } from './nav/nav.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import {MatCardModule} from '@angular/material/card';
 
 
 
@@ -15,14 +17,16 @@ import {MatSidenavModule} from '@angular/material/sidenav';
   declarations: [
     AppComponent,
     NavComponent,
-    SideBarComponent
+    SideBarComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MDBBootstrapModule.forRoot(),
     BrowserAnimationsModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

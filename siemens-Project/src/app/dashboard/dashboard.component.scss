@@ -1,0 +1,21 @@
+img{
+    width: 200px;
+}
+.card{
+    margin:2rem auto;
+    max-width: 1200px;
+
+ 
+}
+.content{
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 1rem;
+    justify-content: start;
+    gap: 3rem;
+
+    .content--text{
+        max-width: 50%;
+    }
+}
+

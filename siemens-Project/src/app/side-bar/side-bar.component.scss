@@ -2,22 +2,22 @@
 .sidenav {
     position: absolute;
     right: 0;
-    
+    top: 0;
     height: 100%;
+    overflow: hidden;
 
 }
 
 .container {
-    z-index: -1;
     width: 200px;
     height: 100%;
-    background-color: white;
-
+    background-color: transparent;
 
     .mat-sidenav {
         width: 100%;
-
     }
+
+
 }
 
 .svg {
@@ -26,4 +26,16 @@
     img {
         width: 100%;
     }
+}
+
+.text-format{
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: black;
+
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
 }
