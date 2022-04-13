@@ -11,7 +11,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {MatCardModule} from '@angular/material/card';
 import { ProjectsComponent } from './projects/projects.component';
-
+import { ProjectDetailsComponent } from './project-details/project-details.component';
+import {MatButtonModule} from '@angular/material/button';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ProjectsComponent } from './projects/projects.component';
     NavComponent,
     SideBarComponent,
     DashboardComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    ProjectDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,8 @@ import { ProjectsComponent } from './projects/projects.component';
     MDBBootstrapModule.forRoot(),
     BrowserAnimationsModule,
     MatSidenavModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

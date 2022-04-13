@@ -1,0 +1,33 @@
+<div class="project--main">
+
+
+    <div *ngIf="edit; else elseBlock">
+        <div class="project--content">
+            <div class="project--info">
+                <p><span>Project Name:</span> <input type="text" [value]="name" (change)="updateProject()"></p>
+                <p><span>Project Status:</span> <input type="text" [value]="status"> </p>
+            </div>
+            <div class="project--info">
+                <p><span> Start Data: </span> <input type="text" [value]="start"> </p>
+                <p><span>Project End Data: </span> <input type="text" [value]="end"> </p>
+            </div>
+        </div>
+    </div>
+    <ng-template #elseBlock>
+        <div class="project--content">
+            <div class="project--info">
+                <p><span>Project Name:</span> {{name}}</p>
+                <p><span>Project Status:</span> {{status}}</p>
+            </div>
+            <div class="project--info">
+                <p><span> Start Data: </span> {{start}}</p>
+                <p><span>Project End Data: </span>{{end}}</p>
+            </div>
+        </div>
+    </ng-template>
+
+
+    <div class="edit--button">
+        <button class="m-2" mat-raised-button (click)="edit = !edit">Edit</button>
+    </div>
+</div>
