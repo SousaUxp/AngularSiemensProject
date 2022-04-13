@@ -15,6 +15,7 @@ import { ProjectDetailsComponent } from './project-details/project-details.compo
 import {MatButtonModule} from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { NewComponentComponent } from './new-component/new-component.component';
+import { MainPageComponent } from './main-page/main-page.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NewComponentComponent } from './new-component/new-component.component';
     DashboardComponent,
     ProjectsComponent,
     ProjectDetailsComponent,
-    NewComponentComponent
+    NewComponentComponent,
+    MainPageComponent
   ],
   imports: [
     BrowserModule,

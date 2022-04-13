@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 @Component({
   selector: 'Side-Bar',
   templateUrl: './side-bar.component.html',
@@ -6,13 +6,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SideBarComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild('drawer') elDrawer!: any;
+  
+  @Output() isFocused = new EventEmitter<boolean>()
+    constructor() { }
   showFiller = true;
   ngOnInit(): void {
   }
 
-  drawerEvent(ev:any){
-    console.log(ev.target)
+  drawerEvent() {
+    this.elDrawer.toggle()
+    this.isFocused.emit(this.elDrawer.opened)
   }
 
 }

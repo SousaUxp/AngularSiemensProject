@@ -5,7 +5,14 @@
     top: 0;
     height: 100%;
     overflow: hidden;
+   
+}
 
+.sidemenu{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: .75rem;
 }
 
 .container {
@@ -38,4 +45,8 @@
 .content{
     display: flex;
     flex-direction: column;
+}
+
+.logo{
+    max-width: 100px;
 }

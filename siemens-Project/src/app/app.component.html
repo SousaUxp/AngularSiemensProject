@@ -1,7 +1,6 @@
+<div [class.root]="focus">
     <Nav></Nav>
-    <!-- <Side-Bar></Side-Bar> -->
-    <!-- <Dashboard></Dashboard> -->
-    <div *ngIf="data">
-        <Projects [data]="projectsData" ></Projects>
-    </div>
-    
+    <Side-Bar (isFocused)="checkFocus($event)"></Side-Bar>
+
+    <router-outlet></router-outlet>
+</div>

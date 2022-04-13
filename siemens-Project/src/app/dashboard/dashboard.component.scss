@@ -1,21 +1,25 @@
-img{
+img {
     width: 200px;
+    object-fit: cover;
 }
-.card{
-    margin:2rem auto;
+
+.card {
+    margin: 2rem auto;
     max-width: 1200px;
 
- 
 }
-.content{
+
+.content {
     display: flex;
     flex-direction: row-reverse;
     margin: 1rem;
     justify-content: start;
     gap: 3rem;
 
-    .content--text{
+    .content--text {
         max-width: 50%;
+        font-size: 1rem;
+        line-height: 1.5rem;
+
     }
 }
-

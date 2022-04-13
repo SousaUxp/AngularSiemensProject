@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { projects } from 'src/assets/interfaces';
+import { DataService } from '../data-service.service';
 
 @Component({
   selector: 'Projects',
@@ -9,9 +10,12 @@ import { projects } from 'src/assets/interfaces';
 export class ProjectsComponent implements OnInit {
   @Input() data:projects[] = [{}]
   addNew=false
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
+    this.dataService.getData().subscribe((data: any) => {
+      this.data = data
+    })
   }
 
   deleteProject(project:any){

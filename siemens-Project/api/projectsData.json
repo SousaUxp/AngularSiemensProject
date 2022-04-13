@@ -1,25 +1,11 @@
 {
   "projects": [
     {
-      "id": "5b046ecf-63ee-438f-9e29-d1f5407c5ca7",
-      "name": "",
-      "startDate": "",
-      "endDate": "",
-      "status": "asd"
-    },
-    {
-      "id": "657855e3-211f-4216-91f4-3208a2145c19",
-      "name": "asd",
-      "startDate": "",
-      "endDate": "",
-      "status": ""
-    },
-    {
-      "id": "c35a6a32-653c-4c1e-8d30-3811368c81b2",
-      "name": "asd",
-      "startDate": "",
-      "endDate": "",
-      "status": ""
+      "id": "3293b6b8-7161-420b-bc5e-6d5882f19ea5",
+      "name": "12",
+      "startDate": "12",
+      "endDate": "12",
+      "status": "12"
     }
   ]
 }
