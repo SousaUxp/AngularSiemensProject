@@ -14,7 +14,8 @@ export class ProjectsComponent implements OnInit {
 
   ngOnInit(): void {
     this.dataService.getData().subscribe((data: any) => {
-      this.data = data
+      console.log(data)
+      this.data = data.projects
     })
   }
 

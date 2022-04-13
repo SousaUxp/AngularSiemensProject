@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { projects } from 'src/assets/interfaces';
+import { apiLink } from 'src/assets/api';
 
 @Injectable({
   providedIn: 'root'
@@ -13,20 +14,20 @@ export class DataService {
    }
 
    getData(){
-    return this.http.get<projects[]>('/api/projects')
+    return this.http.get<projects[]>(apiLink)
    }
 
   updateServerData(project: projects) {
     console.log(project)
-    this.http.put(`/api/projects/${project.id}`, project).subscribe(data => this.data = data);
+    this.http.put(`${apiLink}/${project.id}`, project).subscribe(data => this.data = data);
   }
 
   addNewData(project: projects){
-    return this.http.post(`/api/projects/`, project).subscribe(data => this.data = data);
+    return this.http.post(`${apiLink}`, project).subscribe(data => this.data = data);
   }
 
   deleteData(projectId: string){
-    this.http.delete(`/api/projects/${projectId}`).subscribe(data => this.data = data);
+    this.http.delete(`${apiLink}/${projectId}`).subscribe(data => this.data = data);
   }
 
 }
