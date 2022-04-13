@@ -13,7 +13,8 @@ import {MatCardModule} from '@angular/material/card';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 import {MatButtonModule} from '@angular/material/button';
-
+import { HttpClientModule } from '@angular/common/http';
+import { NewComponentComponent } from './new-component/new-component.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {MatButtonModule} from '@angular/material/button';
     SideBarComponent,
     DashboardComponent,
     ProjectsComponent,
-    ProjectDetailsComponent
+    ProjectDetailsComponent,
+    NewComponentComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,9 @@ import {MatButtonModule} from '@angular/material/button';
     BrowserAnimationsModule,
     MatSidenavModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

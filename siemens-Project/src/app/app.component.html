@@ -1,4 +1,7 @@
     <Nav></Nav>
     <!-- <Side-Bar></Side-Bar> -->
     <!-- <Dashboard></Dashboard> -->
-    <Projects [data]="data"></Projects>
+    <div *ngIf="data">
+        <Projects [data]="projectsData" ></Projects>
+    </div>
+    

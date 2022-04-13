@@ -83,13 +83,15 @@
           "defaultConfiguration": "production"
         },
         "serve": {
+          
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
               "browserTarget": "siemens-Project:build:production"
             },
             "development": {
-              "browserTarget": "siemens-Project:build:development"
+              "browserTarget": "siemens-Project:build:development",
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
@@ -98,6 +100,7 @@
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
             "browserTarget": "siemens-Project:build"
+          
           }
         },
         "test": {

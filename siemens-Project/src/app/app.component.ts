@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import myData from '../assets/projectsData.json'
+import { HttpClient } from '@angular/common/http';
+
+import { projects } from 'src/assets/interfaces';
+import { DataService } from './data-service.service';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +10,21 @@ import myData from '../assets/projectsData.json'
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  data = myData
   title = 'siemens-Project';
+  // data: any
+  projectsData: projects[] = []
+  constructor(private http: HttpClient, private dataService:DataService) {
+  }
+
+  async ngOnInit() {
+    this.dataService.getData().subscribe((data: any) => {
+      this.projectsData = data
+    })
+  }
+
+
+
+  get data(){
+    return this.projectsData
+  }
 }

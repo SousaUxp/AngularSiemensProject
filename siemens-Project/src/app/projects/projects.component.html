@@ -1,11 +1,21 @@
 <mat-card class="card">
     <div class="m-4">
         <mat-card-title> Projects </mat-card-title>
+        <button  class="mt-2" mat-raised-button (click)="addNew = !addNew">
+            <p class="m-0" *ngIf="addNew">cancel</p>
+            <p class="m-0" *ngIf="!addNew">Add another project</p>
+
+        </button>
+
         <div class="content">
-            <div *ngFor="let project of data;  let elementIndex = index" class="project">
-                <Project-details [name]="project.name" [status]="project.status" 
-                [start]="project.startDate" [end]="project.endDate" [index]="elementIndex"></Project-details>
+            <div *ngIf="addNew" class="project">
+                <new-Project (addProject)="addNewProject($event)"></new-Project>
             </div>
+            <div *ngFor="let project of data;" class="project">
+                <Project-details [name]="project.name" [status]="project.status" [start]="project.startDate"
+                    [end]="project.endDate" [index]="project.id" (delete)="deleteProject($event)"></Project-details>
+            </div>
+           
         </div>
     </div>
 </mat-card>

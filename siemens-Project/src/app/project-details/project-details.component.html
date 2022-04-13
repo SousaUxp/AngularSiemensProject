@@ -4,12 +4,12 @@
     <div *ngIf="edit; else elseBlock">
         <div class="project--content">
             <div class="project--info">
-                <p><span>Project Name:</span> <input type="text" [value]="name" (change)="updateProject()"></p>
-                <p><span>Project Status:</span> <input type="text" [value]="status"> </p>
+                <p><span>Project Name:</span> <input #nameValue type="text" [value]="name" ></p>
+                <p><span>Project Status:</span> <input #statusValue type="text" [value]="status"> </p>
             </div>
             <div class="project--info">
-                <p><span> Start Data: </span> <input type="text" [value]="start"> </p>
-                <p><span>Project End Data: </span> <input type="text" [value]="end"> </p>
+                <p><span> Start Data: </span> <input #startValue type="text" [value]="start"> </p>
+                <p><span>Project End Data: </span> <input #endValue type="text" [value]="end"> </p>
             </div>
         </div>
     </div>
@@ -28,6 +28,9 @@
 
 
     <div class="edit--button">
-        <button class="m-2" mat-raised-button (click)="edit = !edit">Edit</button>
+        <button *ngIf="!edit" class="m-2" mat-raised-button (click)="deleteProject()">Delete</button>
+        <button *ngIf="!edit" class="m-2" mat-raised-button (click)="edit = !edit">Edit</button>
+        <button *ngIf="edit" class="m-2" mat-raised-button (click)="edit = !edit">Cancel</button>
+        <button *ngIf="edit" class="m-2" mat-raised-button (click)="updateProject()">Done!</button>
     </div>
 </div>

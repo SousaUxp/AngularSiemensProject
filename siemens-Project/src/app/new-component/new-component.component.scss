@@ -1,0 +1,33 @@
+.project--content {
+    position: relative;
+
+
+}
+
+.project--content {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.project--info {
+    font-size: 1rem;
+
+    span {
+        font-weight: bold;
+    }
+
+    * {
+        margin: 1rem;
+    }
+
+    input {
+        margin: 0;
+    }
+}
+
+.edit--button {
+    display: flex;
+    justify-content: center;
+
+}
