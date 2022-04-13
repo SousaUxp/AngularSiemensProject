@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {MatCardModule} from '@angular/material/card';
+import { ProjectsComponent } from './projects/projects.component';
 
 
 
@@ -18,7 +19,8 @@ import {MatCardModule} from '@angular/material/card';
     AppComponent,
     NavComponent,
     SideBarComponent,
-    DashboardComponent
+    DashboardComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
