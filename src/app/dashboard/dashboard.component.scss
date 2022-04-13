@@ -13,7 +13,7 @@ img {
     display: flex;
     flex-direction: row-reverse;
     margin: 1rem;
-    justify-content: start;
+    justify-content: flex-start;
     gap: 3rem;
 
     .content--text {
