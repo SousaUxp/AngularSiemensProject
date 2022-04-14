@@ -7,27 +7,27 @@ import { apiLink } from 'src/assets/api';
   providedIn: 'root'
 })
 export class DataService {
-  data:any 
+  data: any
 
   constructor(private http: HttpClient) {
-  
-   }
+  }
 
-   getData(){
+  getData() {
+    
     return this.http.get<projects[]>(apiLink)
-   }
+  }
 
   updateServerData(project: projects) {
-    console.log(project)
-    this.http.put(`${apiLink}/${project.id}`, project).subscribe(data => this.data = data);
+    
+    // this.http.put(`${apiLink}/${project.id}`, project).subscribe(data => this.data = data);
   }
 
-  addNewData(project: projects){
-    return this.http.post(`${apiLink}`, project).subscribe(data => this.data = data);
+  addNewData(project: projects) {
+    // return this.http.post(`${apiLink}`, project).subscribe(data => this.data = data);
   }
 
-  deleteData(projectId: string){
-    this.http.delete(`${apiLink}/${projectId}`).subscribe(data => this.data = data);
+  deleteData(projectId: string) {
+    // this.http.delete(`${apiLink}/${projectId}`).subscribe(data => this.data = data);
   }
 
 }

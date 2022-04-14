@@ -46,7 +46,6 @@
             "scripts": [
               "node_modules/chart.js/dist/Chart.js",
               "node_modules/hammerjs/hammer.min.js"
-            
             ]
           },
           "configurations": {
@@ -83,15 +82,17 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "move-safe:build",
+            "proxyConfig": "proxy.conf.json"
+          },
           "configurations": {
             "production": {
               "browserTarget": "siemens-Project:build:production"
             },
             "development": {
               "browserTarget": "siemens-Project:build:development",
-              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
@@ -100,7 +101,6 @@
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
             "browserTarget": "siemens-Project:build"
-          
           }
         },
         "test": {

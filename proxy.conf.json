@@ -1,5 +1,8 @@
 {
-    "/api": {
-      "target": "http://localhost:3000"
-    }
+  "/api/*": {
+     "target":  "sousauxp.github.io/siemens.github.io/data/data.json",
+     "secure": true,
+     "logLevel": "debug",
+     "changeOrigin": true
   }
+}
