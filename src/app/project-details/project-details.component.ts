@@ -36,20 +36,26 @@ export class ProjectDetailsComponent implements OnInit {
   }
 
   deleteProject() {
-      this.dataServ.deleteData(this.index as unknown as string)
-      this.delete.emit({
-          id: this.index,
-          name: this.name,
-          status: this.status,
-          startDate: this.start,
-          endDate: this.end
-      })
+    this.dataServ.deleteData(this.index as unknown as string)
+    this.delete.emit({
+      id: this.index,
+      name: this.name,
+      status: this.status,
+      startDate: this.start,
+      endDate: this.end
+    })
   }
 
   updateProject() {
     this.edit = !this.edit
     this.name = this.elName.nativeElement.value
+    if (this.elStatus.nativeElement.value.slice(-1) != '%') {
+      console.log('re')
+      this.elStatus.nativeElement.value = this.elStatus.nativeElement.value.concat('%')
+    }
+
     this.status = this.elStatus.nativeElement.value
+
     this.start = this.elStart.nativeElement.value
     this.end = this.elEnd.nativeElement.value
 
